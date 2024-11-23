@@ -39,15 +39,6 @@ public class ToolCreation implements ItemCreationStrategy
     @Override
     public Item fromTokens(final String... tokens)
     {
-        // Tool tool = new Tool();
-        // tool.setName(tokens[0]);
-        // tool.setMaterial(tokens[1]);
-        // tool.setDurability(Integer.parseInt(tokens[2]));
-        // tool.setSpeed(Integer.parseInt(tokens[3]));
-        // tool.setModifier(tokens[4]);
-        // tool.setModifierLevel(Integer.parseInt(tokens[5]));
-        // return tool;
-
         return new Tool(tokens[0], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), tokens[1], tokens[4], Integer.parseInt(tokens[5]));
     }
 
@@ -65,13 +56,5 @@ public class ToolCreation implements ItemCreationStrategy
 
         Tool theOriginal = (Tool) original;
         return new Tool(theOriginal.getName(), theOriginal.getDurability(), theOriginal.getSpeed(), theOriginal.getMaterial(), theOriginal.getModifier(), theOriginal.getModifierLevel());
-
-    //     newTool.setName(theOriginal.getName());
-    //     newTool.setDurability(theOriginal.getDurability());
-    //     newTool.setSpeed(theOriginal.getSpeed());
-    //     newTool.setMaterial(theOriginal.getMaterial());
-    //     newTool.setModifier(theOriginal.getModifier());
-    //     newTool.setModifierLevel(theOriginal.getModifierLevel());
-    //     return newTool;
     }
 }

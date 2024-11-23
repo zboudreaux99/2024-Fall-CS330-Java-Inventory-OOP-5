@@ -39,16 +39,6 @@ public class ArmourCreation implements ItemCreationStrategy
     @Override
     public Item fromTokens(final String... tokens)
     {
-        // Armour armour = new Armour();
-        // armour.setName(tokens[0]);
-        // armour.setMaterial(tokens[1]);
-        // armour.setDurability(Integer.parseInt(tokens[2]));
-        // armour.setDefense(Integer.parseInt(tokens[3]));
-        // armour.setModifier(tokens[4]);
-        // armour.setModifierLevel(Integer.parseInt(tokens[5]));
-        // armour.setElement(tokens[6]);
-        // return armour;
-
         return new Armour(tokens[0], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), tokens[1], tokens[4], Integer.parseInt(tokens[5]), tokens[6]);
     }
 
@@ -66,14 +56,5 @@ public class ArmourCreation implements ItemCreationStrategy
 
         Armour theOriginal = (Armour) original;
         return new Armour(theOriginal.getName(), theOriginal.getDurability(), theOriginal.getDefense(), theOriginal.getMaterial(), theOriginal.getModifier(), theOriginal.getModifierLevel(), theOriginal.getElement());
-
-        // newArmour.setName(theOriginal.getName());
-        // newArmour.setDurability(theOriginal.getDurability());
-        // newArmour.setDefense(theOriginal.getDefense());
-        // newArmour.setMaterial(theOriginal.getMaterial());
-        // newArmour.setModifier(theOriginal.getModifier());
-        // newArmour.setModifierLevel(theOriginal.getModifierLevel());
-        // newArmour.setElement(theOriginal.getElement());
-        // return newArmour;
     }
 }
