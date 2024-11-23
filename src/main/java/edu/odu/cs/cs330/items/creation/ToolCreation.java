@@ -71,5 +71,5 @@ public class ToolCreation implements ItemCreationStrategy
     //     newTool.setModifier(theOriginal.getModifier());
     //     newTool.setModifierLevel(theOriginal.getModifierLevel());
     //     return newTool;
-    // }
+    }
 }
