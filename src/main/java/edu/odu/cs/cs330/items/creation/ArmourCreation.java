@@ -29,7 +29,7 @@ public class ArmourCreation implements ItemCreationStrategy
     public int requiredNumberOfValues()
     {
         // Replace the return value;
-        return 0;
+        return 7;
     }
 
     @SuppressWarnings({
@@ -39,7 +39,15 @@ public class ArmourCreation implements ItemCreationStrategy
     @Override
     public Item fromTokens(final String... tokens)
     {
-        return null;
+        Armour armour = new Armour();
+        armour.setName(tokens[0]);
+        armour.setMaterial(tokens[1]);
+        armour.setDurability(Integer.parseInt(tokens[2]));
+        armour.setDefense(Integer.parseInt(tokens[3]));
+        armour.setModifier(tokens[4]);
+        armour.setModifierLevel(Integer.parseInt(tokens[5]));
+        armour.setElement(tokens[6]);
+        return armour;
     }
 
     @SuppressWarnings({
@@ -55,7 +63,15 @@ public class ArmourCreation implements ItemCreationStrategy
         }
 
         Armour theOriginal = (Armour) original;
+        Armour newArmour = new Armour();
 
-        return null;
+        newArmour.setName(theOriginal.getName());
+        newArmour.setDurability(theOriginal.getDurability());
+        newArmour.setDefense(theOriginal.getDefense());
+        newArmour.setMaterial(theOriginal.getMaterial());
+        newArmour.setModifier(theOriginal.getModifier());
+        newArmour.setModifierLevel(theOriginal.getModifierLevel());
+        newArmour.setElement(theOriginal.getElement());
+        return newArmour;
     }
 }

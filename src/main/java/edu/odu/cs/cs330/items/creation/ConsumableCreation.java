@@ -22,14 +22,14 @@ public class ConsumableCreation implements ItemCreationStrategy
     public Item fromDefaults()
     {
         // Return a **Default** Consumable
-        return null;
+        return new Consumable();
     }
 
     @Override
     public int requiredNumberOfValues()
     {
         // Replace the return value;
-        return 0;
+        return 3;
     }
 
     @SuppressWarnings({
@@ -39,7 +39,11 @@ public class ConsumableCreation implements ItemCreationStrategy
     @Override
     public Item fromTokens(final String... tokens)
     {
-        return null;
+        Consumable consumable = new Consumable();
+        consumable.setName(tokens[0]);
+        consumable.setEffect(tokens[1]);
+        consumable.setNumberOfUses(Integer.parseInt(tokens[2]));
+        return consumable;
     }
 
     @SuppressWarnings({
@@ -55,7 +59,10 @@ public class ConsumableCreation implements ItemCreationStrategy
         }
 
         Consumable theOriginal = (Consumable) original;
-
-        return new Consumable();
+        Consumable newConsumable = new Consumable();
+        newConsumable.setName(theOriginal.getName());
+        newConsumable.setEffect(theOriginal.getEffect());
+        newConsumable.setNumberOfUses(theOriginal.getNumberOfUses());
+        return newConsumable;
     }
 }
