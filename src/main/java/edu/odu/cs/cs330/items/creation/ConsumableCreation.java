@@ -39,11 +39,12 @@ public class ConsumableCreation implements ItemCreationStrategy
     @Override
     public Item fromTokens(final String... tokens)
     {
-        Consumable consumable = new Consumable();
-        consumable.setName(tokens[0]);
-        consumable.setEffect(tokens[1]);
-        consumable.setNumberOfUses(Integer.parseInt(tokens[2]));
-        return consumable;
+        // Consumable consumable = new Consumable();
+        // consumable.setName(tokens[0]);
+        // consumable.setEffect(tokens[1]);
+        // consumable.setNumberOfUses(Integer.parseInt(tokens[2]));
+        // return consumable;
+        return new Consumable(tokens[0], tokens[1], Integer.parseInt(tokens[2]));
     }
 
     @SuppressWarnings({
