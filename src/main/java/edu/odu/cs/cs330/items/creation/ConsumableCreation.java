@@ -59,10 +59,11 @@ public class ConsumableCreation implements ItemCreationStrategy
         }
 
         Consumable theOriginal = (Consumable) original;
-        Consumable newConsumable = new Consumable();
-        newConsumable.setName(theOriginal.getName());
-        newConsumable.setEffect(theOriginal.getEffect());
-        newConsumable.setNumberOfUses(theOriginal.getNumberOfUses());
-        return newConsumable;
+        return new Consumable(theOriginal.getName(), theOriginal.getEffect(), theOriginal.getNumberOfUses());
+
+        // newConsumable.setName(theOriginal.getName());
+        // newConsumable.setEffect(theOriginal.getEffect());
+        // newConsumable.setNumberOfUses(theOriginal.getNumberOfUses());
+        // return newConsumable;
     }
 }

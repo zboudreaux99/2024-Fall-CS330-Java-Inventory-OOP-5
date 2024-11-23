@@ -62,13 +62,14 @@ public class ToolCreation implements ItemCreationStrategy
         }
 
         Tool theOriginal = (Tool) original;
-        Tool newTool = new Tool();
-        newTool.setName(theOriginal.getName());
-        newTool.setDurability(theOriginal.getDurability());
-        newTool.setSpeed(theOriginal.getSpeed());
-        newTool.setMaterial(theOriginal.getMaterial());
-        newTool.setModifier(theOriginal.getModifier());
-        newTool.setModifierLevel(theOriginal.getModifierLevel());
-        return newTool;
-    }
+        return new Tool(theOriginal.getName(), theOriginal.getDurability(), theOriginal.getSpeed(), theOriginal.getMaterial(), theOriginal.getModifier(), theOriginal.getModifierLevel());
+
+    //     newTool.setName(theOriginal.getName());
+    //     newTool.setDurability(theOriginal.getDurability());
+    //     newTool.setSpeed(theOriginal.getSpeed());
+    //     newTool.setMaterial(theOriginal.getMaterial());
+    //     newTool.setModifier(theOriginal.getModifier());
+    //     newTool.setModifierLevel(theOriginal.getModifierLevel());
+    //     return newTool;
+    // }
 }

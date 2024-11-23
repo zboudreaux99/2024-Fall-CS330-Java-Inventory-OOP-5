@@ -63,15 +63,15 @@ public class ArmourCreation implements ItemCreationStrategy
         }
 
         Armour theOriginal = (Armour) original;
-        Armour newArmour = new Armour();
+        return new Armour(theOriginal.getName(), theOriginal.getDurability(), theOriginal.getDefense(), theOriginal.getMaterial(), theOriginal.getModifier(), theOriginal.getModifierLevel(), theOriginal.getElement());
 
-        newArmour.setName(theOriginal.getName());
-        newArmour.setDurability(theOriginal.getDurability());
-        newArmour.setDefense(theOriginal.getDefense());
-        newArmour.setMaterial(theOriginal.getMaterial());
-        newArmour.setModifier(theOriginal.getModifier());
-        newArmour.setModifierLevel(theOriginal.getModifierLevel());
-        newArmour.setElement(theOriginal.getElement());
-        return newArmour;
+        // newArmour.setName(theOriginal.getName());
+        // newArmour.setDurability(theOriginal.getDurability());
+        // newArmour.setDefense(theOriginal.getDefense());
+        // newArmour.setMaterial(theOriginal.getMaterial());
+        // newArmour.setModifier(theOriginal.getModifier());
+        // newArmour.setModifierLevel(theOriginal.getModifierLevel());
+        // newArmour.setElement(theOriginal.getElement());
+        // return newArmour;
     }
 }
