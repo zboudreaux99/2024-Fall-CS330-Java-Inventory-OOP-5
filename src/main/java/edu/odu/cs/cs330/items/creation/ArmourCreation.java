@@ -22,7 +22,7 @@ public class ArmourCreation implements ItemCreationStrategy
     public Item fromDefaults()
     {
         // Return a **Default** Armour
-        return null;
+        return new Armour();
     }
 
     @Override

@@ -44,7 +44,6 @@ public class Armour extends Equippable implements Item
     public Armour()
     {
         super();
-
         this.defense = 0;
     }
 
