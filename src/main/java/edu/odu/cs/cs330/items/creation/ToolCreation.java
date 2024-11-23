@@ -48,7 +48,7 @@ public class ToolCreation implements ItemCreationStrategy
         // tool.setModifierLevel(Integer.parseInt(tokens[5]));
         // return tool;
 
-        return new tool(token[0], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), token[1], tokens[4],Integer.parseInt(tokens[5]));
+        return new tool(tokens[0], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), tokens[1], tokens[4],Integer.parseInt(tokens[5]));
     }
 
     @SuppressWarnings({
